@@ -1,0 +1,182 @@
+{
+    "locals": [{
+            "id": 1414,
+            "type": "Portal",
+            "name": "Jacqueline Kennedy Onassis Reservoir",
+            "coordinates": {
+                "latitude": 40.7656918,
+                "longitude": -73.9737489
+            },
+            "gameSettings": {
+                "energy": 180,
+                "ownership": {
+                    "player": "LoboMau"
+                }
+
+            }
+        },
+        {
+            "id": 1411,
+            "type": "Portal",
+            "name": "Jacqueline Kennedy Reservoir",
+            "coordinates": {
+                "latitude": 40.7656918,
+                "longitude": -73.9737489
+            },
+            "gameSettings": {
+                "energy": 210,
+                "ownership": {
+                    "player": "Luis"
+                }
+
+            }
+        },
+        {
+            "id": 14,
+            "type": "Portal",
+            "name": "Jacqueline",
+            "coordinates": {
+                "latitude": 40.7656918,
+                "longitude": -73.9737489
+            },
+            "gameSettings": {
+                "energy": 180,
+                "ownership": {
+                    "player": "Gonçalo"
+                }
+
+            }
+        },
+        {
+            "id": 17,
+            "type": "Portal",
+            "name": "Jacqueline2",
+            "coordinates": {
+                "latitude": 40.7656918,
+                "longitude": -73.9737489
+            },
+            "gameSettings": {
+                "energy": 180,
+                "ownership": {
+                    "player": "Gonçalo"
+                }
+
+            }
+        }, {
+            "gameSettings": {
+                "ownership": {
+                    "player": "Gonçalo"
+                },
+                "energy": 3245
+            },
+            "name": "CM Felgueiras",
+            "coordinates": {
+                "latitude": -53.222,
+                "longitude": -988.12345
+            },
+            "id": 45354,
+            "type": "Portal"
+        },
+        {
+            "id": 5212,
+            "type": "Connector",
+            "coordinates": {
+                "latitude": 40.7697989,
+                "longitude": -73.9723702
+            },
+            "gameSettings": {
+                "energy": 110,
+                "cooldown": 0
+
+            }
+        },
+        {
+            "id": 15,
+            "type": "Connector",
+            "coordinates": {
+                "latitude": 40.7697989,
+                "longitude": -73.9723702
+            },
+            "gameSettings": {
+                "energy": 110,
+                "cooldown": 3
+
+            }
+        },
+        {
+            "id": 60,
+            "type": "Connector",
+            "coordinates": {
+                "latitude": 11.7697989,
+                "longitude": -43.9723702
+            },
+            "gameSettings": {
+                "energy": 1010,
+                "cooldown": 2
+
+            }
+        },
+        {
+            "id": 16,
+            "type": "Connector",
+            "coordinates": {
+                "latitude": 65.7697989,
+                "longitude": -73.9723702
+            },
+            "gameSettings": {
+                "energy": 180,
+                "cooldown": 1
+
+            }
+        }
+    ],
+    "routes": [{
+            "from": 1414,
+            "to": 5212
+        },
+        {
+            "from": 14,
+            "to": 5212
+        }, {
+            "from": 15,
+            "to": 1411
+        },
+        {
+            "from": 1414,
+            "to": 1411
+        }, {
+            "from": 20,
+            "to": 1411
+        },
+        {
+            "from": 16,
+            "to": 1411
+        }
+    ],
+    "Players": [{
+            "name": "LoboMau",
+            "team": "Sparks",
+            "level": 5,
+            "experiencePoints": 24998,
+            "maxEnergy": 100,
+            "currentEnergy": 70
+
+        },
+        {
+            "name": "Luis",
+            "team": "GIANTS",
+            "level": 10,
+            "experiencePoints": 24998,
+            "maxEnergy": 100,
+            "currentEnergy": 70
+        },
+        {
+            "name": "Gonçalo",
+            "team": "GIANTS",
+            "level": 10,
+            "experiencePoints": 22198,
+            "maxEnergy": 100,
+            "currentEnergy": 70
+        }
+    ]
+}

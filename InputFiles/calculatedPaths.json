@@ -1,0 +1,30 @@
+{
+    "calculatedPaths": [
+        [{
+                "Type": "Portal",
+                "ID": 14
+            },
+            {
+                "Type": "Connector",
+                "ID": 5212
+            },
+            {
+                "Type": "Portal",
+                "ID": 1414
+            }
+        ],
+        [{
+                "Type": "Connector",
+                "ID": 15
+            },
+            {
+                "Type": "Portal",
+                "ID": 1411
+            },
+            {
+                "Type": "Portal",
+                "ID": 1414
+            }
+        ]
+    ]
+}

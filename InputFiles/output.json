@@ -1,0 +1,179 @@
+{
+    "routes": [{
+            "from": 5212,
+            "to": 1414
+        },
+        {
+            "from": 5212,
+            "to": 14
+        },
+        {
+            "from": 1411,
+            "to": 15
+        },
+        {
+            "from": 1411,
+            "to": 1414
+        },
+        {
+            "from": 1411,
+            "to": 16
+        }
+    ],
+    "players": [{
+            "maxEnergy": 100,
+            "level": 10,
+            "name": "Luis",
+            "experiencePoints": 24998,
+            "currentEnergy": 70,
+            "id": 1,
+            "team": "Giants"
+        },
+        {
+            "maxEnergy": 100,
+            "level": 10,
+            "name": "Gonçalo",
+            "experiencePoints": 22198,
+            "currentEnergy": 70,
+            "id": 2,
+            "team": "Giants"
+        },
+        {
+            "maxEnergy": 100,
+            "level": 5,
+            "name": "LoboMau",
+            "experiencePoints": 24998,
+            "currentEnergy": 70,
+            "id": 0,
+            "team": "Sparks"
+        }
+    ],
+    "locals": [{
+            "gameSettings": {
+                "ownership": {
+                    "player": 0
+                },
+                "energy": 180
+            },
+            "name": "Jacqueline Kennedy Onassis Reservoir",
+            "coordinates": {
+                "latitude": 40.7656918,
+                "longitude": -73.9737489
+            },
+            "id": 1414,
+            "type": "Portal"
+        },
+        {
+            "gameSettings": {
+                "ownership": {
+                    "player": 1
+                },
+                "energy": 210
+            },
+            "name": "Jacqueline Kennedy Reservoir",
+            "coordinates": {
+                "latitude": 40.7656918,
+                "longitude": -73.9737489
+            },
+            "id": 1411,
+            "type": "Portal"
+        },
+        {
+            "gameSettings": {
+                "ownership": {
+                    "player": 2
+                },
+                "energy": 180
+            },
+            "name": "Jacqueline",
+            "coordinates": {
+                "latitude": 40.7656918,
+                "longitude": -73.9737489
+            },
+            "id": 14,
+            "type": "Portal"
+        },
+        {
+            "gameSettings": {
+                "ownership": {
+                    "player": 2
+                },
+                "energy": 180
+            },
+            "name": "Jacqueline2",
+            "coordinates": {
+                "latitude": 40.7656918,
+                "longitude": -73.9737489
+            },
+            "id": 17,
+            "type": "Portal"
+        },
+        {
+            "gameSettings": {
+                "ownership": {
+                    "player": 2
+                },
+                "energy": 3245
+            },
+            "name": "CM Felgueiras",
+            "coordinates": {
+                "latitude": -53.222,
+                "longitude": -988.12345
+            },
+            "id": 45354,
+            "type": "Portal"
+        },
+        {
+            "gameSettings": {
+                "cooldown": 3,
+                "energy": 110
+            },
+            "coordinates": {
+                "latitude": 40.7697989,
+                "longitude": -73.9723702
+            },
+            "id": 5212,
+            "type": "Connector",
+            "energy": 110
+        },
+        {
+            "gameSettings": {
+                "cooldown": 3,
+                "energy": 110
+            },
+            "coordinates": {
+                "latitude": 40.7697989,
+                "longitude": -73.9723702
+            },
+            "id": 15,
+            "type": "Connector",
+            "energy": 110
+        },
+        {
+            "gameSettings": {
+                "cooldown": 2,
+                "energy": 1010
+            },
+            "coordinates": {
+                "latitude": 11.7697989,
+                "longitude": -43.9723702
+            },
+            "id": 60,
+            "type": "Connector",
+            "energy": 1010
+        },
+        {
+            "gameSettings": {
+                "cooldown": 1,
+                "energy": 180
+            },
+            "coordinates": {
+                "latitude": 65.7697989,
+                "longitude": -73.9723702
+            },
+            "id": 16,
+            "type": "Connector",
+            "energy": 180
+        }
+    ]
+}
