@@ -13,7 +13,7 @@ import pt.ed2023.exceptions.UnknownPathException;
  *
  * @author 8200335
  */
-public class Jogo {
+public class Jogo implements JogoADT {
 
     private Team teamSpark = new Team(Team.TeamName.Sparks);
     private Team teamGiants = new Team(Team.TeamName.Giants);
@@ -31,55 +31,67 @@ public class Jogo {
         this.localNetwork = new Network<Local>();
     }
 
+    @Override
     public void setCalculatedPaths(ArrayUnorderedList<ArrayUnorderedList> calculatedPaths) {
         this.calculatedPaths = calculatedPaths;
     }
 
+    @Override
     public ArrayUnorderedList<ArrayUnorderedList> getCalculatedPaths() {
         return calculatedPaths;
     }
 
+    @Override
     public void setTeamSpark(Team teamSpark) {
         this.teamSpark = teamSpark;
     }
 
+    @Override
     public void setTeamGiants(Team teamGiants) {
         this.teamGiants = teamGiants;
     }
 
+    @Override
     public void setTeamExtra(Team teamExtra) {
         this.teamExtra = teamExtra;
     }
 
+    @Override
     public Team getTeamSpark() {
         return teamSpark;
     }
 
+    @Override
     public Team getTeamGiants() {
         return teamGiants;
     }
 
+    @Override
     public Team getTeamExtra() {
         return teamExtra;
     }
-    
+
+    @Override
     public ArrayUnorderedList<Routes> getRoutesAttay() {
         return routesAttay;
     }
 
+    @Override
     public Network getLocalNetwork() {
         return localNetwork;
     }
 
+    @Override
     public void setRoutesAttay(ArrayUnorderedList<Routes> routesAttay) {
         this.routesAttay = routesAttay;
     }
 
+    @Override
     public void setLocalNetwork(Network localNetwork) {
         this.localNetwork = localNetwork;
     }
-    
 
+    @Override
     public Players getPlayerByID(int ID) throws UnknownPathException {
         for (Players player : teamGiants.getTeamPlayers()) {
             if (player.getId() == ID) {
@@ -98,11 +110,12 @@ public class Jogo {
                 return player;
             }
         }
-        
+
         throw new UnknownPathException("User não existe");
-        
+
     }
 
+    @Override
     public boolean disassociatePlayer(Players player) throws UnknownPathException {
         try {
             if (player.getTeam().equals(Team.TeamName.Sparks)) {
@@ -121,6 +134,7 @@ public class Jogo {
         }
     }
 
+    @Override
     public boolean associatePlayer(Players player, Team.TeamName teamTo) {
         try {
             if (player.getTeam().equals(Team.TeamName.Extra) && teamTo.equals(Team.TeamName.Giants)) {
