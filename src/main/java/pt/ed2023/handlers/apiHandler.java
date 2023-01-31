@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pt.ed2023.utils;
+package pt.ed2023.handlers;
 
 import pt.ed2023.dataStructures.list.ArrayUnorderedList;
 import pt.ed2023.dataStructures.network.Network;
@@ -60,14 +60,14 @@ public class apiHandler {
                 }
                 case 5 -> {
                     String JSONFile = "InputFiles\\inputExemplo.json";
-                    pt.ed2023.utils.fileHandler.readJSON(
+                    pt.ed2023.handlers.fileHandler.readJSON(
                             JSONFile,
                             jogo
                     );
                 }
                 case 6 -> {
                     String JSONFileExport = "InputFiles\\output.json";
-                    pt.ed2023.utils.fileHandler.exportToJSON(
+                    pt.ed2023.handlers.fileHandler.exportToJSON(
                             JSONFileExport,
                             jogo
                     );
@@ -681,7 +681,7 @@ public class apiHandler {
                 case 3 -> {
                     String JSONFileExport = "InputFiles\\calculatedPaths.json";
 
-                    pt.ed2023.utils.fileHandler.exportCalculatedRoutesToJSON(JSONFileExport, jogo.getCalculatedPaths());
+                    pt.ed2023.handlers.fileHandler.exportCalculatedRoutesToJSON(JSONFileExport, jogo.getCalculatedPaths());
                 }
                 case 4 -> {
                     return false;

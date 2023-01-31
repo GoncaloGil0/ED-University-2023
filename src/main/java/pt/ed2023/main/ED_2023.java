@@ -19,7 +19,7 @@ import org.json.simple.parser.ParseException;
 public class ED_2023 {
 
     public static void main(String[] args) throws IOException, ParseException, NonComparableElementException, EmptyCollectionException, NullException, UnknownPathException, InterruptedException {
-        pt.ed2023.utils.apiHandler.mainAPI(new Jogo());
+        pt.ed2023.handlers.apiHandler.mainAPI(new Jogo());
     }
     
 }
