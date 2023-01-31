@@ -5,7 +5,7 @@
 package pt.ed2023.dataStructures.network;
 
 import pt.ed2023.dataStructures.list.ArrayUnorderedList;
-import pt.ed2023.main.Local;
+import pt.ed2023.gameStructures.Local;
 import pt.ed2023.exceptions.NullException;
 import pt.ed2023.exceptions.NonComparableElementException;
 import pt.ed2023.exceptions.EmptyCollectionException;

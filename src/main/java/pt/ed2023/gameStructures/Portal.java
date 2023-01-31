@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pt.ed2023.main;
+package pt.ed2023.gameStructures;
 
 import org.json.simple.JSONObject;
 
@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
  *
  * @author 8200335
  */
-public class Portal extends Local {
+public class Portal extends Local implements PortalADT {
 
     private String name;
     private int ownership;
@@ -34,30 +34,37 @@ public class Portal extends Local {
 
     }
     
+    @Override
     public State getState() {
         return state;
     }
 
+    @Override
     public void setState(State state) {
         this.state = state;
     }
 
+    @Override
     public void setOwnership(int ownership) {
         this.ownership = ownership;
     }
 
+    @Override
     public int getOwnership() {
         return ownership;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
 
+    @Override
     public JSONObject ownershipToJson() {
         JSONObject jsonOwnership = new JSONObject();
         // EM VEZ DO ID TEM DE PASSAR O NOME
@@ -65,6 +72,7 @@ public class Portal extends Local {
         return jsonOwnership;
     }
 
+    @Override
     public JSONObject gameSettingsToJson() {
         JSONObject jsonGameSettings = new JSONObject();
         jsonGameSettings.put("energy", this.getEnergy());
@@ -72,6 +80,7 @@ public class Portal extends Local {
         return jsonGameSettings;
     }
 
+    @Override
     public JSONObject toJson() {
         JSONObject jsonPortal = new JSONObject();
         jsonPortal.put("id", this.getId());

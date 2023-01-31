@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pt.ed2023.main;
+package pt.ed2023.gameStructures;
 
 import pt.ed2023.dataStructures.list.ArrayUnorderedList;
 import pt.ed2023.dataStructures.network.Network;

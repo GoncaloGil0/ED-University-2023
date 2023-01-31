@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pt.ed2023.main;
+package pt.ed2023.gameStructures;
 
 import org.json.simple.JSONObject;
 
@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
  *
  * @author 8200335
  */
-public class Players {
+public class Players implements PlayersADT {
 
     private String name;
     private Team.TeamName team;
@@ -31,62 +31,76 @@ public class Players {
         this.currentEnergy = currentEnergy;
     }
 
+    @Override
     public int getId() {
         return id;
     }
 
-    public static int generateID() {
+    private int generateID() {
         return currentID++;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
 
+    @Override
     public Team.TeamName getTeam() {
         return team;
     }
 
+    @Override
     public void setTeam(Team.TeamName team) {
         this.team = team;
     }
 
+    @Override
     public int getLevel() {
         return level;
     }
 
+    @Override
     public void setLevel(int level) {
         this.level = level;
     }
 
+    @Override
     public int getExperiencePoints() {
         return experiencePoints;
     }
 
+    @Override
     public void setExperiencePoints(int experiencePoints) {
         this.experiencePoints = experiencePoints;
     }
 
+    @Override
     public int getMaxEnergy() {
         return maxEnergy;
     }
 
+    @Override
     public void setMaxEnergy(int maxEnergy) {
         this.maxEnergy = maxEnergy;
     }
 
+    @Override
     public int getCurrentEnergy() {
         return currentEnergy;
     }
 
+    @Override
     public void setCurrentEnergy(int currentEnergy) {
         this.currentEnergy = currentEnergy;
     }
-    
+
+    @Override
     public JSONObject toJson() {
         JSONObject jsonPlayer = new JSONObject();
         jsonPlayer.put("id", this.id);
@@ -98,7 +112,7 @@ public class Players {
         jsonPlayer.put("currentEnergy", this.currentEnergy);
         return jsonPlayer;
     }
-    
+
     @Override
     public String toString() {
         return "Players [id=" + id + ", name=" + name + ", team=" + team + ", level=" + level + ", experiencePoints="

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pt.ed2023.main;
+package pt.ed2023.gameStructures;
 
 import java.time.LocalDateTime;
 import org.json.simple.JSONObject;
@@ -11,7 +11,7 @@ import org.json.simple.JSONObject;
  *
  * @author 8200335
  */
-public class Connector extends Local {
+public class Connector extends Local implements ConnectorADT {
 
     private int cooldown;
     private LocalDateTime lastUsed = LocalDateTime.now();
@@ -21,6 +21,7 @@ public class Connector extends Local {
         this.cooldown = cooldown;
     }
     
+    @Override
     public boolean rechargeUser(Players player) throws InterruptedException{
         
         LocalDateTime diff = this.lastUsed.plusMinutes(this.cooldown);
@@ -34,18 +35,22 @@ public class Connector extends Local {
         return false;
     }
         
+    @Override
     public void setLastUsed(LocalDateTime lastUsed) {
         this.lastUsed = lastUsed;
     }
 
+    @Override
     public LocalDateTime getLastUsed() {
         return lastUsed;
     }
 
+    @Override
     public void setCooldown(int cooldown) {
         this.cooldown = cooldown;
     }
 
+    @Override
     public JSONObject gameSettingsToJson() {
         JSONObject jsonGameSettings = new JSONObject();
         jsonGameSettings.put("energy", this.getEnergy());
@@ -53,6 +58,7 @@ public class Connector extends Local {
         return jsonGameSettings;
     }
 
+    @Override
     public JSONObject toJson() {
         JSONObject jsonConnector = new JSONObject();
         jsonConnector.put("id", this.getId());

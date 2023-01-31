@@ -4,6 +4,7 @@
  */
 
 package pt.ed2023.main;
+import pt.ed2023.gameStructures.Jogo;
 import pt.ed2023.exceptions.EmptyCollectionException;
 import pt.ed2023.exceptions.NonComparableElementException;
 import pt.ed2023.exceptions.NullException;

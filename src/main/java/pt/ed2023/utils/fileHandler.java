@@ -5,15 +5,15 @@
 package pt.ed2023.utils;
 
 import pt.ed2023.dataStructures.list.ArrayUnorderedList;
-import pt.ed2023.main.Connector;
-import pt.ed2023.main.Coordinates;
-import pt.ed2023.main.Jogo;
-import pt.ed2023.main.Local;
-import pt.ed2023.main.Players;
-import pt.ed2023.main.Portal;
-import pt.ed2023.main.Team;
-import pt.ed2023.main.Routes;
-import pt.ed2023.main.Team.TeamName;
+import pt.ed2023.gameStructures.Connector;
+import pt.ed2023.gameStructures.Coordinates;
+import pt.ed2023.gameStructures.Jogo;
+import pt.ed2023.gameStructures.Local;
+import pt.ed2023.gameStructures.Players;
+import pt.ed2023.gameStructures.Portal;
+import pt.ed2023.gameStructures.Team;
+import pt.ed2023.gameStructures.Routes;
+import pt.ed2023.gameStructures.Team.TeamName;
 import pt.ed2023.exceptions.EmptyCollectionException;
 import pt.ed2023.exceptions.NonComparableElementException;
 import pt.ed2023.exceptions.NullException;

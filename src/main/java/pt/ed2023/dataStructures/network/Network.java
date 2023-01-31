@@ -6,12 +6,11 @@ package pt.ed2023.dataStructures.network;
 
 import pt.ed2023.dataStructures.list.UnorderedListADT;
 import pt.ed2023.dataStructures.list.ArrayUnorderedList;
-import pt.ed2023.main.Connector;
-import pt.ed2023.main.Portal;
+import pt.ed2023.gameStructures.Connector;
+import pt.ed2023.gameStructures.Portal;
 import pt.ed2023.exceptions.EmptyCollectionException;
 import pt.ed2023.exceptions.UnknownPathException;
 import java.util.Iterator;
-import pt.ed2023.main.Local;
 
 /**
  *
