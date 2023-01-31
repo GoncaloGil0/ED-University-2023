@@ -4,6 +4,7 @@
  */
 package pt.ed2023.dataStructures.network;
 
+import java.math.BigDecimal;
 import pt.ed2023.dataStructures.list.UnorderedListADT;
 import pt.ed2023.dataStructures.list.ArrayUnorderedList;
 import pt.ed2023.gameStructures.Connector;
@@ -11,6 +12,8 @@ import pt.ed2023.gameStructures.Portal;
 import pt.ed2023.exceptions.EmptyCollectionException;
 import pt.ed2023.exceptions.UnknownPathException;
 import java.util.Iterator;
+import pt.ed2023.gameStructures.Coordinates;
+import pt.ed2023.gameStructures.Local;
 
 /**
  *
@@ -18,6 +21,7 @@ import java.util.Iterator;
  * @param <T>
  */
 public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
+
     protected final int DEFAULT_NETWORK_CAPACITY = 10;
     private double[][] networkAdjMatrix;
 
@@ -25,7 +29,7 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
         super();
         this.networkAdjMatrix = new double[this.DEFAULT_NETWORK_CAPACITY][this.DEFAULT_NETWORK_CAPACITY];
     }
-    
+
     @Override
     public void addVertex(T vertex) {
         if (this.numVertices + 1 >= this.networkAdjMatrix.length) {
@@ -36,25 +40,46 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
     }
 
     @Override
-    public void addEdge(T vertex1, T vertex2, double weight) {
-        if (weight < 0.0D) {
-            throw new IllegalArgumentException("O peso não pode ser inferior ao default.");
-        } else {
+    public void addEdge(T vertex1, T vertex2) {
+
+        if (vertex1 instanceof Local && vertex2 instanceof Local) {
+            double weight = calculateDistance(((Local) vertex1).getCoordinates(), ((Local) vertex1).getCoordinates());
             super.addEdge(vertex1, vertex2);
             this.setEdgeWeight(vertex1, vertex2, weight);
+        } else {
+            super.addEdge(vertex1, vertex2);
+            this.setEdgeWeight(vertex1, vertex2, 0);
         }
     }
-    
+
+    private double calculateDistance(Coordinates ponto1, Coordinates ponto2) {
+        // ESTA A RETORNAR SEMPRE 0!!
+        double lat1 = ponto1.getLatitude();
+        double lon1 = ponto1.getLongitude();
+        double lat2 = ponto2.getLatitude(); 
+        double lon2 = ponto2.getLongitude();
+        
+        double dLat = Math.toRadians(lat2 - lat1);
+        double dLon = Math.toRadians(lon2 - lon1);
+        lat1 = Math.toRadians(lat1);
+        lat2 = Math.toRadians(lat2);
+
+        double a = Math.pow(Math.sin(dLat / 2), 2) + Math.pow(Math.sin(dLon / 2), 2) * Math.cos(lat1) * Math.cos(lat2);
+        double c = 2 * Math.asin(Math.sqrt(a));
+        return 6371 * c;
+    }
 
     protected int[] getEdgeWithWeightOf(double weight, boolean[] visited) {
         int[] edge = new int[2];
-        for (int i = 0; i < numVertices; i++)
-            for (int j = 0; j < numVertices; j++)
+        for (int i = 0; i < numVertices; i++) {
+            for (int j = 0; j < numVertices; j++) {
                 if ((networkAdjMatrix[i][j] == weight) && (visited[i] ^ visited[j])) {
                     edge[0] = i;
                     edge[1] = j;
                     return edge;
                 }
+            }
+        }
 
         // Will only get to here if a valid edge is not found
         edge[0] = -1;
@@ -86,8 +111,7 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
             }
         }
     }
-    
-    
+
     public void printConnectorVertices() {
         for (int i = 0; i < numVertices; i++) {
             if (vertices[i] instanceof Connector) {
@@ -204,24 +228,29 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
         int[] edge = new int[2];
         LinkedHeap<Double> minHeap = new LinkedHeap<>();
         Network<T> resultGraph = new Network<>();
-        if (isEmpty() || !isConnected())
+        if (isEmpty() || !isConnected()) {
             return resultGraph;
+        }
         resultGraph.networkAdjMatrix = new double[numVertices][numVertices];
-        for (int i = 0; i < numVertices; i++)
-            for (int j = 0; j < numVertices; j++)
+        for (int i = 0; i < numVertices; i++) {
+            for (int j = 0; j < numVertices; j++) {
                 resultGraph.networkAdjMatrix[i][j] = Double.POSITIVE_INFINITY;
+            }
+        }
         resultGraph.vertices = (T[]) (new Object[numVertices]);
         boolean[] visited = new boolean[numVertices];
-        for (int i = 0; i < numVertices; i++)
+        for (int i = 0; i < numVertices; i++) {
             visited[i] = false;
+        }
 
         edge[0] = 0;
         resultGraph.vertices[0] = this.vertices[0];
         resultGraph.numVertices++;
         visited[0] = true;
 
-        for (int i = 0; i < numVertices; i++)
+        for (int i = 0; i < numVertices; i++) {
             minHeap.addElement(networkAdjMatrix[0][i]);
+        }
         while ((resultGraph.size() < this.size()) && !minHeap.isEmpty()) {
             do {
                 try {
@@ -233,10 +262,11 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
             } while (!indexIsValid(edge[0]) || !indexIsValid(edge[1]));
             x = edge[0];
             y = edge[1];
-            if (!visited[x])
+            if (!visited[x]) {
                 index = x;
-            else
+            } else {
                 index = y;
+            }
             resultGraph.vertices[index] = this.vertices[index];
             visited[index] = true;
             resultGraph.numVertices++;
@@ -253,28 +283,30 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
         }
         return resultGraph;
     }
-    
-    public T[] getVertices(){
+
+    public T[] getVertices() {
         return super.vertices;
     }
-    
-    public String verticesToString(){
-        if (numVertices == 0)
+
+    public String verticesToString() {
+        if (numVertices == 0) {
             return "Não existem vertices";
-        
+        }
+
         String result = "";
-        
+
         for (int i = 0; i < numVertices; i++) {
             result += vertices[i].toString() + '\n';
         }
-        
+
         return result;
     }
 
     @Override
     public String toString() {
-        if (numVertices == 0)
+        if (numVertices == 0) {
             return "Grafo está vazio";
+        }
 
         String result = super.toString();
 
@@ -294,5 +326,10 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
 
         result += "\n";
         return result;
+    }
+
+    @Override
+    public void addEdge(T vertex1, T vertex2, double weight) throws EmptyCollectionException {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

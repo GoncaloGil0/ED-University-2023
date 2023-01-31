@@ -15,26 +15,41 @@ public class Connector extends Local implements ConnectorADT {
 
     private int cooldown;
     private LocalDateTime lastUsed = LocalDateTime.now();
+    private int lastPlayerID;
 
     public Connector(int id, Coordinates coordinates, int cooldown, int energy) {
         super(id, Local.Types.Connector, coordinates, energy);
         this.cooldown = cooldown;
     }
-    
+
     @Override
-    public boolean rechargeUser(Players player) throws InterruptedException{
-        
-        LocalDateTime diff = this.lastUsed.plusMinutes(this.cooldown);
-        Thread.sleep(5000);
+    public boolean rechargeUser(Players player) throws InterruptedException {
+
+        if (lastPlayerID == player.getId()) {
+            return false;
+        }
+
         int energyNeeded = player.getMaxEnergy() - player.getCurrentEnergy();
+
+        if (energyNeeded > super.getEnergy()) {
+            return false;
+        }
+
+        LocalDateTime diff = this.lastUsed.plusMinutes(this.cooldown);
         
-        if (energyNeeded < super.getEnergy() && diff.isBefore(LocalDateTime.now())){
+        //AQUI SÒ PARA TESTES 
+        Thread.sleep(5000);
+
+        if (diff.isBefore(LocalDateTime.now())) {
             player.setCurrentEnergy(player.getCurrentEnergy() + energyNeeded);
+            this.lastUsed = LocalDateTime.now();
+            this.lastPlayerID = player.getId();
             return true;
         }
+        
         return false;
     }
-        
+
     @Override
     public void setLastUsed(LocalDateTime lastUsed) {
         this.lastUsed = lastUsed;
