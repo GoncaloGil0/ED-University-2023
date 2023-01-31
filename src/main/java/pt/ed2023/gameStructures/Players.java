@@ -29,6 +29,7 @@ public class Players implements PlayersADT {
         this.experiencePoints = experiencePoints;
         this.maxEnergy = maxEnergy;
         this.currentEnergy = currentEnergy;
+        setLevel();
     }
 
     @Override
@@ -64,10 +65,9 @@ public class Players implements PlayersADT {
     public int getLevel() {
         return level;
     }
-
-    @Override
-    public void setLevel(int level) {
-        this.level = level;
+    
+    private void setLevel() {
+        this.level = (int) Math.ceil(0.07 * Math.sqrt(this.experiencePoints));
     }
 
     @Override
@@ -78,6 +78,7 @@ public class Players implements PlayersADT {
     @Override
     public void setExperiencePoints(int experiencePoints) {
         this.experiencePoints = experiencePoints;
+        setLevel();
     }
 
     @Override

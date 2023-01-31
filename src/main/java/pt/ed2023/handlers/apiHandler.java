@@ -412,11 +412,10 @@ public class apiHandler {
                             System.out.println("\nSelecione o que deseja alterar?");
                             System.out.println("1. Nome");
                             System.out.println("2. Equipa");
-                            System.out.println("3. Nivel");
-                            System.out.println("4. Pontos de experiencia");
-                            System.out.println("5. Energia Maxima");
-                            System.out.println("6. Energia no momento");
-                            System.out.println("7. Voltar");
+                            System.out.println("3. Pontos de experiencia");
+                            System.out.println("4. Energia Maxima");
+                            System.out.println("5. Energia no momento");
+                            System.out.println("6. Voltar");
                             System.out.print("Opção: ");
                             choice = scanner.nextInt();
                             scanner.nextLine();
@@ -438,31 +437,24 @@ public class apiHandler {
                                     System.out.println("Equipa alterada com sucesso");
                                 }
                                 case 3 -> {
-                                    System.out.print("Digite o novo nivel:");
-                                    playerEdit.setLevel(scanner.nextInt());
-                                    scanner.nextLine();
-                                    System.out.println("Nivel alterado com sucesso");
-
-                                }
-                                case 4 -> {
                                     System.out.print("Digite os novos pontos de experiencia:");
                                     playerEdit.setExperiencePoints(scanner.nextInt());
                                     scanner.nextLine();
                                     System.out.println("Pontos alterados com sucesso");
                                 }
-                                case 5 -> {
+                                case 4 -> {
                                     System.out.print("Digite a nova energia maxima:");
                                     playerEdit.setMaxEnergy(scanner.nextInt());
                                     scanner.nextLine();
                                     System.out.println("Energia maxima alterada com sucesso");
                                 }
-                                case 6 -> {
+                                case 5 -> {
                                     System.out.print("Digite a nova energia atual:");
                                     playerEdit.setCurrentEnergy(scanner.nextInt());
                                     scanner.nextLine();
                                     System.out.println("Energia atual alterada com sucesso");
                                 }
-                                case 7 -> {
+                                case 6 -> {
                                     return false;
                                 }
                                 default ->
@@ -669,13 +661,14 @@ public class apiHandler {
                 case 2 -> {
                     System.out.println("\nCalcular caminho mais curto entre dois pontos:");
                     System.out.println(jogo.getLocalNetwork().verticesToString());
-
+/*
                     System.out.print("Escolha a origem (usando o ID): ");
                     int origem = scanner.nextInt();
                     System.out.print("Escolha o destino (usando o ID): ");
                     int destino = scanner.nextInt();
+*/
+                    ((Connector) jogo.getLocalNetwork().getVertices()[5]).rechargeUser(jogo.getTeamGiants().getTeamPlayers().get(1));
                     
-                    ((Connector) jogo.getLocalNetwork().getVertices()[5]).setLastUsed(LocalDateTime.now());
                     ((Connector) jogo.getLocalNetwork().getVertices()[5]).rechargeUser(jogo.getTeamGiants().getTeamPlayers().get(1));
                 }
                 case 3 -> {

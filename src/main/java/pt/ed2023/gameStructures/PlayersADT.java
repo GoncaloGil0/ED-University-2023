@@ -48,11 +48,6 @@ public interface PlayersADT {
      */
     public int getLevel();
     
-    /**
-     * 
-     * @param level 
-     */
-    public void setLevel(int level) ;
     
     /**
      * 

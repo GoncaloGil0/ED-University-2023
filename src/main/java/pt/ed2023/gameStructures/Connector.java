@@ -36,7 +36,7 @@ public class Connector extends Local implements ConnectorADT {
         }
 
         LocalDateTime diff = this.lastUsed.plusMinutes(this.cooldown);
-        
+
         //AQUI SÒ PARA TESTES 
         Thread.sleep(5000);
 
@@ -46,7 +46,7 @@ public class Connector extends Local implements ConnectorADT {
             this.lastPlayerID = player.getId();
             return true;
         }
-        
+
         return false;
     }
 
