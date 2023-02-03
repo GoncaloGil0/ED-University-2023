@@ -47,9 +47,7 @@ public class ArrayUnorderedList<T> extends ArrayList<T> implements UnorderedList
         T[] unorderedList = list;
         int tam = unorderedList.length + 1;
         T[] temp = (T[]) (new Object[tam]);
-        for (int i = 0; i < rear; i++) {
-            temp[i] = unorderedList[i];
-        }
+        System.arraycopy(unorderedList, 0, temp, 0, rear);
         unorderedList = temp;
     }
 
