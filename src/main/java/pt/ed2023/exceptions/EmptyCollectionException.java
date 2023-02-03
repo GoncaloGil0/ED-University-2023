@@ -5,11 +5,13 @@
 package pt.ed2023.exceptions;
 
 /**
+ * Excepção de lista vazia
  *
  * @author 8200335
  */
 public class EmptyCollectionException extends Exception {
-        public EmptyCollectionException(String message) {
+
+    public EmptyCollectionException(String message) {
         super("Erro " + message);
     }
 }

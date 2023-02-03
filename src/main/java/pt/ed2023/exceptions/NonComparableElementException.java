@@ -5,6 +5,7 @@
 package pt.ed2023.exceptions;
 
 /**
+ * Excepção de elementos não comparaveis
  *
  * @author 8200335
  */
@@ -12,5 +13,5 @@ public class NonComparableElementException extends Exception {
 
     public NonComparableElementException(String o_elemento_ou_classe_não_é_comparável) {
     }
-    
+
 }

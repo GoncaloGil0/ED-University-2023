@@ -19,16 +19,29 @@ import pt.ed2023.exceptions.NonComparableElementException;
 import pt.ed2023.exceptions.NullException;
 import pt.ed2023.exceptions.UnknownPathException;
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.Scanner;
 import org.json.simple.parser.ParseException;
 
 /**
- *
+ *  Classe responsavel pela gestão dos Menus (APIs) todos do Jogo
+ * 
  * @author 8200335
  */
 public class apiHandler {
 
+    /**
+     * Menu principal
+     * 
+     * @param jogo
+     * @return
+     * @throws IOException
+     * @throws ParseException
+     * @throws NonComparableElementException
+     * @throws EmptyCollectionException
+     * @throws NullException
+     * @throws UnknownPathException
+     * @throws InterruptedException 
+     */
     public static boolean mainAPI(Jogo jogo) throws IOException, ParseException, NonComparableElementException, EmptyCollectionException, NullException, UnknownPathException, InterruptedException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -82,6 +95,12 @@ public class apiHandler {
         }
     }
 
+    /**
+     * Menu da gestão de Portais e Connectores 
+     * 
+     * @param localNetwork
+     * @return 
+     */
     private static boolean portalConnectorAPI(Network<Local> localNetwork) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -261,6 +280,14 @@ public class apiHandler {
         }
     }
 
+    /**
+     * Menu de gestão de Rotas 
+     * 
+     * @param localNetwork
+     * @param routesArray
+     * @return
+     * @throws EmptyCollectionException 
+     */
     private static boolean routesAPI(Network<Local> localNetwork, ArrayUnorderedList<Routes> routesArray) throws EmptyCollectionException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -336,6 +363,14 @@ public class apiHandler {
         }
     }
 
+    /**
+     * Menu de gestão de Jogadores 
+     * 
+     * @param jogo
+     * @return
+     * @throws EmptyCollectionException
+     * @throws UnknownPathException 
+     */
     private static boolean playersAPI(Jogo jogo) throws EmptyCollectionException, UnknownPathException {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -627,6 +662,16 @@ public class apiHandler {
         }
     }
 
+    /**
+     * Menu de gestão das definições do Jogo
+     * 
+     * @param jogo
+     * @return
+     * @throws EmptyCollectionException
+     * @throws UnknownPathException
+     * @throws IOException
+     * @throws InterruptedException 
+     */
     private static boolean gameAPI(Jogo jogo) throws EmptyCollectionException, UnknownPathException, IOException, InterruptedException {
         Scanner scanner = new Scanner(System.in);
         while (true) {

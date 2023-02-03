@@ -10,6 +10,7 @@ import pt.ed2023.exceptions.EmptyCollectionException;
 import pt.ed2023.exceptions.UnknownPathException;
 
 /**
+ * Classe representativa do Jogo
  *
  * @author 8200335
  */
@@ -22,6 +23,9 @@ public class Jogo implements JogoADT {
     private ArrayUnorderedList<ArrayUnorderedList> calculatedPaths;
     private Network localNetwork;
 
+    /**
+     * Construtor da Classe Jogo
+     */
     public Jogo() {
         this.teamSpark = new Team(Team.TeamName.Sparks);
         this.teamGiants = new Team(Team.TeamName.Giants);
@@ -31,66 +35,133 @@ public class Jogo implements JogoADT {
         this.localNetwork = new Network<Local>();
     }
 
+    /**
+     * Guarda os caminhos calculados
+     *
+     * @param calculatedPaths
+     */
     @Override
     public void setCalculatedPaths(ArrayUnorderedList<ArrayUnorderedList> calculatedPaths) {
         this.calculatedPaths = calculatedPaths;
     }
 
+    /**
+     * Retorna os caminhos calculados
+     *
+     * @return
+     */
     @Override
     public ArrayUnorderedList<ArrayUnorderedList> getCalculatedPaths() {
         return calculatedPaths;
     }
 
+    /**
+     * Guarda a equipa Spark
+     *
+     * @param teamSpark
+     */
     @Override
     public void setTeamSpark(Team teamSpark) {
         this.teamSpark = teamSpark;
     }
 
+    /**
+     * Guarda a equipa Giants
+     *
+     * @param teamGiants
+     */
     @Override
     public void setTeamGiants(Team teamGiants) {
         this.teamGiants = teamGiants;
     }
 
+    /**
+     * Guarda a equipa Extra
+     *
+     * @param teamExtra
+     */
     @Override
     public void setTeamExtra(Team teamExtra) {
         this.teamExtra = teamExtra;
     }
 
+    /**
+     * Retorna a Equipa Spark
+     *
+     * @return
+     */
     @Override
     public Team getTeamSpark() {
         return teamSpark;
     }
 
+    /**
+     * Retorna a equipa Giants
+     *
+     * @return
+     */
     @Override
     public Team getTeamGiants() {
         return teamGiants;
     }
 
+    /**
+     * Retorna a equipa Extra
+     *
+     * @return
+     */
     @Override
     public Team getTeamExtra() {
         return teamExtra;
     }
 
+    /**
+     * Retorna a lista de rotas
+     *
+     * @return
+     */
     @Override
     public ArrayUnorderedList<Routes> getRoutesAttay() {
         return routesAttay;
     }
 
+    /**
+     * Retorna a network de locais
+     *
+     * @return
+     */
     @Override
     public Network getLocalNetwork() {
         return localNetwork;
     }
 
+    /**
+     * Guarda a lista de rotas
+     *
+     * @param routesAttay
+     */
     @Override
     public void setRoutesAttay(ArrayUnorderedList<Routes> routesAttay) {
         this.routesAttay = routesAttay;
     }
 
+    /**
+     * Guarda a network
+     *
+     * @param localNetwork
+     */
     @Override
     public void setLocalNetwork(Network localNetwork) {
         this.localNetwork = localNetwork;
     }
 
+    /**
+     * Retorna o ID de um player no Jogo
+     *
+     * @param ID
+     * @return
+     * @throws UnknownPathException
+     */
     @Override
     public Players getPlayerByID(int ID) throws UnknownPathException {
         for (Players player : teamGiants.getTeamPlayers()) {
@@ -115,6 +186,13 @@ public class Jogo implements JogoADT {
 
     }
 
+    /**
+     * Retira um Jogador da equipa
+     *
+     * @param player
+     * @return
+     * @throws UnknownPathException
+     */
     @Override
     public boolean disassociatePlayer(Players player) throws UnknownPathException {
         try {
@@ -134,6 +212,13 @@ public class Jogo implements JogoADT {
         }
     }
 
+    /**
+     * Adiciona um jogado a uma equipa
+     *
+     * @param player
+     * @param teamTo
+     * @return
+     */
     @Override
     public boolean associatePlayer(Players player, Team.TeamName teamTo) {
         try {
@@ -155,6 +240,10 @@ public class Jogo implements JogoADT {
         return false;
     }
 
+    /**
+     * Retorna uma string representativa do Jogo
+     * @return 
+     */
     @Override
     public String toString() {
         return "Equipas{" + "teamSpark=" + teamSpark.toString() + ", \nteamGiants=" + teamGiants.toString() + ", \nteamExtra=" + teamExtra.toString() + '}';

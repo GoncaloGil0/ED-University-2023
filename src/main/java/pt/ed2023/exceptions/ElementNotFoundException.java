@@ -5,10 +5,12 @@
 package pt.ed2023.exceptions;
 
 /**
+ * Excepção de elemento nao encontrado
  *
  * @author 8200335
  */
 public class ElementNotFoundException extends RuntimeException {
+
     public ElementNotFoundException(String message) {
         super("Erro " + message);
     }

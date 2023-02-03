@@ -24,6 +24,7 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
 
     protected final int DEFAULT_NETWORK_CAPACITY = 10;
     private double[][] networkAdjMatrix;
+    private static final int EARTH_RADIUS = 6371;
 
     public Network() {
         super();
@@ -52,21 +53,24 @@ public class Network<T> extends MatrixGraph<T> implements NetworkADT<T> {
         }
     }
 
-    private double calculateDistance(Coordinates ponto1, Coordinates ponto2) {
-        // ESTA A RETORNAR SEMPRE 0!!
-        double lat1 = ponto1.getLatitude();
-        double lon1 = ponto1.getLongitude();
-        double lat2 = ponto2.getLatitude(); 
-        double lon2 = ponto2.getLongitude();
-        
-        double dLat = Math.toRadians(lat2 - lat1);
-        double dLon = Math.toRadians(lon2 - lon1);
-        lat1 = Math.toRadians(lat1);
-        lat2 = Math.toRadians(lat2);
+    public static double calculateDistance(Coordinates coord1, Coordinates coord2) {
+        // RETORNA SEMPRE 0!!!
+        double lat1 = coord1.getLatitude();
+        double lon1 = coord1.getLongitude();
+        double lat2 = coord2.getLatitude();
+        double lon2 = coord2.getLongitude();
 
-        double a = Math.pow(Math.sin(dLat / 2), 2) + Math.pow(Math.sin(dLon / 2), 2) * Math.cos(lat1) * Math.cos(lat2);
-        double c = 2 * Math.asin(Math.sqrt(a));
-        return 6371 * c;
+        lat1 = Math.toRadians(lat1);
+        lon1 = Math.toRadians(lon1);
+        lat2 = Math.toRadians(lat2);
+        lon2 = Math.toRadians(lon2);
+
+        double dLat = lat2 - lat1;
+        double dLon = lon2 - lon1;
+
+        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return EARTH_RADIUS * c;
     }
 
     protected int[] getEdgeWithWeightOf(double weight, boolean[] visited) {

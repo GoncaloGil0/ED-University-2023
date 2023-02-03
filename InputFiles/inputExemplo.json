@@ -5,7 +5,7 @@
             "name": "Jacqueline Kennedy Onassis Reservoir",
             "coordinates": {
                 "latitude": 40.7656918,
-                "longitude": -73.9737489
+                "longitude": 73.9737489
             },
             "gameSettings": {
                 "energy": 180,
@@ -21,7 +21,7 @@
             "name": "Jacqueline Kennedy Reservoir",
             "coordinates": {
                 "latitude": 40.7656918,
-                "longitude": -73.9737489
+                "longitude": 73.9737489
             },
             "gameSettings": {
                 "energy": 210,
@@ -37,7 +37,7 @@
             "name": "Jacqueline",
             "coordinates": {
                 "latitude": 40.7656918,
-                "longitude": -73.9737489
+                "longitude": 73.9737489
             },
             "gameSettings": {
                 "energy": 180,
@@ -53,7 +53,7 @@
             "name": "Jacqueline2",
             "coordinates": {
                 "latitude": 40.7656918,
-                "longitude": -73.9737489
+                "longitude": 73.9737489
             },
             "gameSettings": {
                 "energy": 180,
@@ -71,8 +71,8 @@
             },
             "name": "CM Felgueiras",
             "coordinates": {
-                "latitude": -53.222,
-                "longitude": -988.12345
+                "latitude": 53.222,
+                "longitude": 98.12345
             },
             "id": 45354,
             "type": "Portal"
@@ -82,7 +82,7 @@
             "type": "Connector",
             "coordinates": {
                 "latitude": 40.7697989,
-                "longitude": -73.9723702
+                "longitude": 73.9723702
             },
             "gameSettings": {
                 "energy": 110,
@@ -95,7 +95,7 @@
             "type": "Connector",
             "coordinates": {
                 "latitude": 40.7697989,
-                "longitude": -73.9723702
+                "longitude": 73.9723702
             },
             "gameSettings": {
                 "energy": 110,
@@ -108,7 +108,7 @@
             "type": "Connector",
             "coordinates": {
                 "latitude": 11.7697989,
-                "longitude": -43.9723702
+                "longitude": 43.9723702
             },
             "gameSettings": {
                 "energy": 1010,
@@ -121,7 +121,7 @@
             "type": "Connector",
             "coordinates": {
                 "latitude": 65.7697989,
-                "longitude": -73.9723702
+                "longitude": 73.9723702
             },
             "gameSettings": {
                 "energy": 180,
@@ -166,7 +166,7 @@
             "name": "Luis",
             "team": "GIANTS",
             "level": 10,
-            "experiencePoints": 24998,
+            "experiencePoints": 249980,
             "maxEnergy": 100,
             "currentEnergy": 70
         },

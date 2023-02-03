@@ -27,11 +27,20 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 /**
+ * Classe de Leitura e escrita de/para ficheiros JSON
  *
  * @author 8200335
  */
 public class fileHandler {
 
+    /**
+     * Função de leitura dos Ficheiros de introdução de dados do Jogo
+     *
+     * @param jsonFilePath
+     * @param jogo
+     * @throws IOException
+     * @throws ParseException
+     */
     public static void readJSON(String jsonFilePath, Jogo jogo) throws IOException, ParseException {
 
         System.out.println("\nAdição de dados a partir de um ficheiro JSON");
@@ -131,6 +140,16 @@ public class fileHandler {
         }
     }
 
+    /**
+     * Função de escrita para um fucheiro JSON as definições do Jogo
+     *
+     * @param jsonFilePath
+     * @param jogo
+     * @throws IOException
+     * @throws NonComparableElementException
+     * @throws EmptyCollectionException
+     * @throws NullException
+     */
     public static void exportToJSON(String jsonFilePath, Jogo jogo) throws IOException, NonComparableElementException, EmptyCollectionException, NullException {
 
         System.out.println("\nExtração de dados para um ficheiro JSON");
@@ -172,8 +191,16 @@ public class fileHandler {
 
     }
 
+    /**
+     * Ficheiro de exportação dos dados das rotas calculadas para um ficheiro
+     * JSON
+     *
+     * @param jsonFilePath
+     * @param calculatedRoutes
+     * @throws IOException
+     */
     public static void exportCalculatedRoutesToJSON(String jsonFilePath, ArrayUnorderedList<ArrayUnorderedList> calculatedRoutes) throws IOException {
-        System.out.println("\nExtração de dados para um ficheiro JSON");
+        System.out.println("\nExportação de dados para um ficheiro JSON");
 
         JSONObject jsonObject = new JSONObject();
         JSONArray calculatedPaths = new JSONArray();

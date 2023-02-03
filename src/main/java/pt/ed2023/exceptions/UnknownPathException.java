@@ -5,15 +5,17 @@
 package pt.ed2023.exceptions;
 
 /**
+ * Excepção de caminho desconhecido
  *
  * @author 8200335
  */
 public class UnknownPathException extends Exception {
-    public UnknownPathException(){
+
+    public UnknownPathException() {
         super();
     }
 
-    public UnknownPathException(String message){
+    public UnknownPathException(String message) {
         super(message);
     }
 }

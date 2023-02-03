@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 import org.json.simple.JSONObject;
 
 /**
+ * Classe dos conectores
  *
  * @author 8200335
  */
@@ -17,11 +18,26 @@ public class Connector extends Local implements ConnectorADT {
     private LocalDateTime lastUsed = LocalDateTime.now();
     private int lastPlayerID;
 
+    /**
+     * Construtor dos connectores
+     *
+     * @param id
+     * @param coordinates
+     * @param cooldown
+     * @param energy
+     */
     public Connector(int id, Coordinates coordinates, int cooldown, int energy) {
         super(id, Local.Types.Connector, coordinates, energy);
         this.cooldown = cooldown;
     }
 
+    /**
+     * Recarrega Jogadores
+     *
+     * @param player
+     * @return
+     * @throws InterruptedException
+     */
     @Override
     public boolean rechargeUser(Players player) throws InterruptedException {
 
@@ -50,21 +66,41 @@ public class Connector extends Local implements ConnectorADT {
         return false;
     }
 
+    /**
+     * Define a ultima vez que foi utilizado
+     *
+     * @param lastUsed
+     */
     @Override
     public void setLastUsed(LocalDateTime lastUsed) {
         this.lastUsed = lastUsed;
     }
 
+    /**
+     * Retorna a ultima vez que o conector foi utilizado
+     *
+     * @return
+     */
     @Override
     public LocalDateTime getLastUsed() {
         return lastUsed;
     }
 
+    /**
+     * Define o tempo de coolDown do Conector
+     *
+     * @param cooldown
+     */
     @Override
     public void setCooldown(int cooldown) {
         this.cooldown = cooldown;
     }
 
+    /**
+     * Retorna um objeto em JSON que caracteriza os settings do conector
+     *
+     * @return
+     */
     @Override
     public JSONObject gameSettingsToJson() {
         JSONObject jsonGameSettings = new JSONObject();
@@ -73,6 +109,11 @@ public class Connector extends Local implements ConnectorADT {
         return jsonGameSettings;
     }
 
+    /**
+     * Retorna um objeto JSON representante do conector
+     *
+     * @return
+     */
     @Override
     public JSONObject toJson() {
         JSONObject jsonConnector = new JSONObject();
@@ -85,6 +126,11 @@ public class Connector extends Local implements ConnectorADT {
         return jsonConnector;
     }
 
+    /**
+     * Retorna uma String representante do conector
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Connector [id=" + getId() + ", type=" + getType() + ", coordinates=" + getCoordinates()

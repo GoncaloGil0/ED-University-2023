@@ -1,0 +1,105 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/peter/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar;C:/Users/peter/.m2/repository/junit/junit/4.10/junit-4.10.jar;C:/Users/peter/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'18'
+-sourcepath
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ED_2023 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'ED_2023 1.0-SNAPSHOT API'
+pt.ed2023.dataStructures.list
+pt.ed2023.dataStructures.network
+pt.ed2023.exceptions
+pt.ed2023.gameStructures
+pt.ed2023.handlers
+pt.ed2023.main
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/list/ArrayList.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/list/ArrayUnorderedList.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/list/ListADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/list/UnorderedListADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/ArrayOrderedList.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/BinaryTreeADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/BinaryTreeNode.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/GraphADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/HeapADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/HeapNode.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/LinkedBinaryTree.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/LinkedHeap.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/LinkedNode.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/LinkedQueue.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/LinkedStack.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/MatrixGraph.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/Network.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/NetworkADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/OrderedListADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/Pair.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/PriorityQueue.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/PriorityQueueNode.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/dataStructures/network/QueueADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/exceptions/ElementNotFoundException.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/exceptions/EmptyCollectionException.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/exceptions/NonComparableElementException.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/exceptions/NullException.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/exceptions/UnknownPathException.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/Connector.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/ConnectorADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/Coordinates.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/CoordinatesADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/Jogo.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/JogoADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/Local.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/LocalADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/Players.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/PlayersADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/Portal.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/PortalADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/Routes.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/RoutesADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/Team.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/gameStructures/TeamADT.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/handlers/apiHandler.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/handlers/fileHandler.java'
+'C:/Users/peter/OneDrive/Documentos/NetBeansProjects/ED_2023_Normal/src/main/java/pt/ed2023/main/ED_2023.java'
+C:\Users\peter\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar = 1661949168265
+C:\Users\peter\.m2\repository\junit\junit\4.10\junit-4.10.jar = 1661950286512
+C:\Users\peter\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar = 1661950286497
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\src\main\java = 1674825457913
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\allclasses-index.html = 1675445885112
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\allpackages-index.html = 1675445885116
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\constant-values.html = 1675445884726
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\copy.svg = 1675445885205
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\element-list = 1675445884633
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\help-doc.html = 1675445885194
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\index-all.html = 1675445885184
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\index.html = 1675445885065
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\javadoc.bat = 1675445693578
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\jquery-ui.overrides.css = 1675445885250
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\member-search-index.js = 1675445885126
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\module-search-index.js = 1675445885118
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\overview-summary.html = 1675445885187
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\overview-tree.html = 1675445885059
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\package-search-index.js = 1675445885121
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\script.js = 1675445885201
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\search.js = 1675445885209
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\serialized-form.html = 1675445884739
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\stylesheet.css = 1675445885198
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\tag-search-index.js = 1675445885128
+C:\Users\peter\OneDrive\Documentos\NetBeansProjects\ED_2023_Normal\target\site\apidocs\type-search-index.js = 1675445885123

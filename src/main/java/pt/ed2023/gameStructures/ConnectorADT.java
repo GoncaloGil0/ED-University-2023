@@ -8,52 +8,61 @@ import java.time.LocalDateTime;
 import org.json.simple.JSONObject;
 
 /**
+ * Este Tipo Abstrato de Dados define as os métodos ou operações que podem ser
+ * realizadas no tocante dos Conectores do Jogo
  *
  * @author 8200335
  */
 public interface ConnectorADT extends LocalADT {
-    
+
     /**
-     * 
+     * Recarrega as energias de um Jogador
+     *
      * @param player
      * @return
-     * @throws InterruptedException 
+     * @throws InterruptedException
      */
     public boolean rechargeUser(Players player) throws InterruptedException;
-    
+
     /**
-     * 
-     * @param lastUsed 
+     * Define a ultima vez que foi utilizado
+     *
+     * @param lastUsed
      */
     public void setLastUsed(LocalDateTime lastUsed);
-    
+
     /**
-     * 
-     * @return 
+     * Retorna a ultima vez que foi utilizado
+     *
+     * @return
      */
     public LocalDateTime getLastUsed();
-    
+
     /**
-     * 
-     * @param cooldown 
+     * Define o tempo de cooldown do conector
+     *
+     * @param cooldown
      */
     public void setCooldown(int cooldown);
-    
+
     /**
-     * 
-     * @return 
+     * Retorna um objeto JSON caracterizante dos settings do connector
+     *
+     * @return
      */
     public JSONObject gameSettingsToJson();
-    
+
     /**
-     * 
-     * @return 
+     * Retorna um objeto caracterizante do conector em JSON
+     *
+     * @return
      */
     public JSONObject toJson();
-    
+
     /**
-     * 
-     * @return 
+     * Retorna uma String caracterizante do connector
+     *
+     * @return
      */
     @Override
     public String toString();

@@ -5,6 +5,7 @@
 package pt.ed2023.exceptions;
 
 /**
+ * Excepção de output null
  *
  * @author 8200335
  */

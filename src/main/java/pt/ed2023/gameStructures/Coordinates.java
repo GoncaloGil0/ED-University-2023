@@ -7,29 +7,51 @@ package pt.ed2023.gameStructures;
 import org.json.simple.JSONObject;
 
 /**
+ * Classe representativa das coordenadas
  *
  * @author 8200335
  */
-public class Coordinates implements CoordinatesADT{
+public class Coordinates implements CoordinatesADT {
 
     private final double latitude;
     private final double longitude;
 
+    /**
+     * Construtor da classe
+     *
+     * @param latitude
+     * @param longitude
+     */
     public Coordinates(double latitude, double longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
+    /**
+     * Retorna a latitude das coordenadas
+     *
+     * @return
+     */
     @Override
     public double getLatitude() {
         return latitude;
     }
 
+    /**
+     * Retorna a longitude das coordenadas
+     *
+     * @return
+     */
     @Override
     public double getLongitude() {
         return longitude;
     }
 
+    /**
+     * Retorna um objeto em JSON caracterizante das coordenadas
+     *
+     * @return
+     */
     @Override
     public JSONObject toJson() {
         JSONObject jsonCoordinates = new JSONObject();
@@ -38,6 +60,11 @@ public class Coordinates implements CoordinatesADT{
         return jsonCoordinates;
     }
 
+    /**
+     * Retorna uma String representativa das coordenadas
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Coordinates [latitude=" + latitude + ", longitude=" + longitude + "]";

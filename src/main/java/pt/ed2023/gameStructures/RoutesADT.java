@@ -7,44 +7,46 @@ package pt.ed2023.gameStructures;
 import org.json.simple.JSONObject;
 
 /**
+ * Este Tipo Abstrato de Dados define as os métodos ou operações que podem ser
+ * realizadas no tocante das Rotas do Jogo
  *
  * @author 8200335
  */
 public interface RoutesADT {
- 
+
     /**
-     * 
-     * @return 
+     * Retorna a origem da rota
+     * @return
      */
     public int getFrom();
-    
+
     /**
-     * 
-     * @param from 
+     * Define o destino da rota
+     * @param from
      */
     public void setFrom(int from);
-    
+
     /**
-     * 
-     * @return 
+     * Retorna o destino da rota
+     * @return
      */
     public int getTo();
-    
+
     /**
-     * 
-     * @param to 
+     * Define o destino da Rota 
+     * @param to
      */
     public void setTo(int to);
-    
+
     /**
-     * 
-     * @return 
+     * Retorna um objeto JSON representativo da Rota
+     * @return
      */
     public JSONObject toJson();
-    
+
     /**
-     * 
-     * @return 
+     * Retorna uma String representativa da Rota
+     * @return
      */
     @Override
     public String toString();
