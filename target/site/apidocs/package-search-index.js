@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"pt.ed2023.dataStructures.list"},{"l":"pt.ed2023.dataStructures.network"},{"l":"pt.ed2023.exceptions"},{"l":"pt.ed2023.gameStructures"},{"l":"pt.ed2023.handlers"},{"l":"pt.ed2023.main"}];updateSearchResults();
