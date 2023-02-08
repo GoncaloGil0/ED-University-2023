@@ -14,6 +14,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * A classe MatrixGraph representa uma implementação de grafo usando matriz de
+ * adjacência.
  *
  * @author 8200335
  * @param <T>
@@ -344,8 +346,6 @@ public class MatrixGraph<T> implements GraphADT<T> {
 
         return resultList.iterator();
     }
-    
-    
 
     @Override
     public boolean isEmpty() {

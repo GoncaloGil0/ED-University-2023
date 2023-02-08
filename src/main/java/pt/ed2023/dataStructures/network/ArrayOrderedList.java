@@ -8,42 +8,46 @@ import pt.ed2023.dataStructures.list.ArrayList;
 import pt.ed2023.exceptions.NonComparableElementException;
 
 /**
+ * A classe ArrayOrderedList representa uma lista ordenada de elementos. Uma
+ * lista ordenada é uma estrutura de dados que armazena elementos em ordem
+ * específica, geralmente crescente ou decrescente.
  *
  * @author 8200335
  * @param <T>
  */
 public class ArrayOrderedList<T> extends ArrayList<T> implements OrderedListADT<T> {
 
-    public ArrayOrderedList() { 
+    public ArrayOrderedList() {
         super();
     }
-    
+
     @Override
     public void add(T element) throws NonComparableElementException {
-        if (!(element instanceof Comparable)) 
+        if (!(element instanceof Comparable)) {
             throw new NonComparableElementException("O elemento ou classe não é comparável");
-        if(size() == list.length) {
+        }
+        if (size() == list.length) {
             expandCapacity();
-	}
-        
-        Comparable<T> temp = (Comparable<T>)element;
+        }
+
+        Comparable<T> temp = (Comparable<T>) element;
         int index = 0;
-        
-        while(index < rear && temp.compareTo(list[index]) > 0) {
+
+        while (index < rear && temp.compareTo(list[index]) > 0) {
             index++;
         }
-        
+
         for (int j = this.rear; j > index; j--) {
-            list[j] = list[j-1];
+            list[j] = list[j - 1];
         }
         this.list[index] = element;
-	rear++;	
+        rear++;
         modCount++;
     }
-    
+
     private void expandCapacity() {
         int tam = list.length + 1;
-        T[] temp = (T[])(new Object[tam]);
+        T[] temp = (T[]) (new Object[tam]);
         for (int i = 0; i < rear; i++) {
             temp[i] = list[i];
         }

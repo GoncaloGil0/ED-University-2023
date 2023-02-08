@@ -7,6 +7,9 @@ package pt.ed2023.dataStructures.list;
 import pt.ed2023.exceptions.EmptyCollectionException;
 
 /**
+ * A interface UnorderedListADT representa uma lista não ordenada abstrata de
+ * elementos. Uma lista não ordenada é uma estrutura de dados onde os elementos
+ * não são inseridos em uma ordem específica.
  *
  * @author 8200335
  * @param <T>

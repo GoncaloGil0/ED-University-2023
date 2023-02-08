@@ -5,14 +5,17 @@
 package pt.ed2023.dataStructures.network;
 
 /**
+ * A classe LinkedNode representa um nó em uma estrutura de dados encadeada.
+ * Cada nó armazena um elemento e uma referência para o próximo nó na sequência.
  *
  * @author 8200335
  * @param <T>
  */
 public class LinkedNode<T> {
+
     private LinkedNode<T> next;
     private T element;
-    
+
     public LinkedNode() {
     }
 
@@ -20,11 +23,11 @@ public class LinkedNode<T> {
         this.element = element;
         this.next = null;
     }
-    
+
     public LinkedNode<T> getNext() {
         return this.next;
     }
-    
+
     public void setNext(LinkedNode<T> next) {
         this.next = next;
     }

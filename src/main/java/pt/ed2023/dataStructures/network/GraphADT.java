@@ -7,6 +7,9 @@ package pt.ed2023.dataStructures.network;
 import java.util.Iterator;
 
 /**
+ * A interface GraphADT representa uma estrutura de grafo abstrata. Um grafo é
+ * uma estrutura de dados composta por vértices e arestas que podem conectar os
+ * vértices.
  *
  * @author 8200335
  * @param <T>

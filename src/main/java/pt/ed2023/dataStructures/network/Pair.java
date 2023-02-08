@@ -5,11 +5,13 @@
 package pt.ed2023.dataStructures.network;
 
 /**
+ * A classe Pair representa uma parelha de elementos do tipo T.
  *
  * @author 8200335
  * @param <T>
  */
 public class Pair<T> {
+
     protected Pair<T> previous;
     protected T vertex;
     protected double cost;

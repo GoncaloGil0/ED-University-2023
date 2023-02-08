@@ -4,7 +4,6 @@
  */
 package pt.ed2023.dataStructures.network;
 
-import java.math.BigDecimal;
 import pt.ed2023.dataStructures.list.UnorderedListADT;
 import pt.ed2023.dataStructures.list.ArrayUnorderedList;
 import pt.ed2023.gameStructures.Connector;
@@ -16,6 +15,8 @@ import pt.ed2023.gameStructures.Coordinates;
 import pt.ed2023.gameStructures.Local;
 
 /**
+ * A classe Network representa uma rede abstrata de elementos. Uma rede é uma
+ * estrutura de dados que permite representar relações entre elementos.
  *
  * @author 8200335
  * @param <T>

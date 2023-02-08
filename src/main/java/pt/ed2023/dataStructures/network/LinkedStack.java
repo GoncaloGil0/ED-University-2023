@@ -7,11 +7,15 @@ package pt.ed2023.dataStructures.network;
 import pt.ed2023.exceptions.NullException;
 
 /**
+ * A classe LinkedStack implementa uma pilha usando uma lista encadeada. Uma
+ * pilha é uma estrutura de dados onde os elementos são adicionados e removidos
+ * na ordem LIFO (Last In, First Out).
  *
  * @author 8200335
  * @param <T>
  */
 public class LinkedStack<T> {
+
     int count;
     LinkedNode<T> top;
 
@@ -19,15 +23,14 @@ public class LinkedStack<T> {
         this.count = 0;
         this.top = null;
     }
-    
+
     public void push(T element) {
         //1º Definir LinkedNode
         LinkedNode<T> newNode = new LinkedNode<>(element);
         newNode.setElement(element);
-        if(this.top == null) {
+        if (this.top == null) {
             this.top = newNode;
-        }
-        else {
+        } else {
             newNode.setNext(top);
             top = newNode;
         }
@@ -35,7 +38,9 @@ public class LinkedStack<T> {
     }
 
     public T pop() throws NullException {
-        if (isEmpty()) throw new NullException("Não existem elementos na lista ligada");
+        if (isEmpty()) {
+            throw new NullException("Não existem elementos na lista ligada");
+        }
 
         T result = top.getElement();
         top = top.getNext();
@@ -43,9 +48,11 @@ public class LinkedStack<T> {
 
         return result;
     }
-    
+
     public T peek() throws NullException {
-        if (isEmpty()) throw new NullException("Stack");
+        if (isEmpty()) {
+            throw new NullException("Stack");
+        }
         LinkedNode<T> temp = this.top;
         return temp.getElement();
     }
@@ -62,12 +69,11 @@ public class LinkedStack<T> {
     public String toString() {
         LinkedNode<T> current = top;
         String s = "LinkedList:\n";
-        while(current != null) {
+        while (current != null) {
             s += current.getElement().toString() + "\n";
             current = current.getNext();
         }
         return s;
-    }  
-    
-}
+    }
 
+}

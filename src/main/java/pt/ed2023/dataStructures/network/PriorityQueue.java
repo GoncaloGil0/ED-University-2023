@@ -7,6 +7,8 @@ package pt.ed2023.dataStructures.network;
 import pt.ed2023.exceptions.EmptyCollectionException;
 
 /**
+ * A classe PriorityQueue representa uma fila de prioridade, onde os elementos
+ * são ordenados com base em uma ordem de prioridade específica.
  *
  * @author 8200335
  * @param <T>

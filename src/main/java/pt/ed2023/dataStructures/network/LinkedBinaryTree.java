@@ -12,8 +12,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * A classe LinkedBinaryTree representa uma árvore binária ligada de elementos.
+ * Uma árvore binária é uma estrutura de dados onde cada nó pode ter no máximo
+ * dois filhos.
  *
  * @author 8200335
+ * @param <T>
  */
 public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
 
@@ -176,7 +180,7 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
             node = nodes.dequeue();
             if (node.element != null) {
                 results.addToRear(node.element);
-                
+
             } else {
                 results.addToRear(null);
             }
@@ -189,7 +193,7 @@ public class LinkedBinaryTree<T> implements BinaryTreeADT<T> {
 
         }
     }
-    
+
     @Override
     public String toString() {
         String s = "Iterator LevelOrder:";

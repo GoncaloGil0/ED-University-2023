@@ -8,6 +8,9 @@ import pt.ed2023.exceptions.EmptyCollectionException;
 import java.util.Iterator;
 
 /**
+ * A interface ListADT representa uma lista abstrata de elementos. Uma lista é
+ * uma estrutura de dados onde os elementos podem ser inseridos ou removidos em
+ * qualquer posição e podem ser acessados em ordem sequencial.
  *
  * @author 8200335
  * @param <T>

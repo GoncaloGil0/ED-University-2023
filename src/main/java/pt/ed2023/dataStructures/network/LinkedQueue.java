@@ -3,14 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package pt.ed2023.dataStructures.network;
+
 import pt.ed2023.exceptions.EmptyCollectionException;
 
 /**
+ * A classe LinkedQueue implementa a interface QueueADT e representa uma fila
+ * encadeada de elementos. Esta permite a inserção e remoção de elementos em
+ * tempo constante O(1).
  *
  * @author 8200335
  * @param <T>
  */
 public class LinkedQueue<T> implements QueueADT<T> {
+
     private int count;
     private LinkedNode<T> front, rear;
 
@@ -19,14 +24,14 @@ public class LinkedQueue<T> implements QueueADT<T> {
         this.front = null;
         this.rear = null;
     }
-    
+
     /**
      * {@inheritDoc}
      */
     @Override
     public void enqueue(T element) {
         // Allocate the new node in the heap
-        LinkedNode<T> node = new LinkedNode<T>(element);
+        LinkedNode<T> node = new LinkedNode<>(element);
         //System.out.println("Inserting" +  element + "\n");
 
         // special case: queue was empty
@@ -41,13 +46,15 @@ public class LinkedQueue<T> implements QueueADT<T> {
         }
         this.count++;
     }
-    
+
     /**
      * {@inheritDoc}
      */
     @Override
     public T dequeue() throws EmptyCollectionException {
-        if (isEmpty()) throw new EmptyCollectionException("A lista está vazia");
+        if (isEmpty()) {
+            throw new EmptyCollectionException("A lista está vazia");
+        }
 
         LinkedNode<T> temp = this.front;
         //System.out.println("Removing " + temp.getElement() + "\n");
@@ -63,7 +70,7 @@ public class LinkedQueue<T> implements QueueADT<T> {
         // deallocate the memory of removed node and
         // optionally return the removed item
         T item = temp.getElement();
-        this.count--;                  
+        this.count--;
         return item;
     }
 
@@ -72,11 +79,13 @@ public class LinkedQueue<T> implements QueueADT<T> {
      */
     @Override
     public T first() throws EmptyCollectionException {
-        if (isEmpty()) throw new EmptyCollectionException("A lista está vazia"); 
+        if (isEmpty()) {
+            throw new EmptyCollectionException("A lista está vazia");
+        }
         T result = front.getElement();
         return result;
     }
-    
+
     /**
      * {@inheritDoc}
      */
@@ -100,7 +109,7 @@ public class LinkedQueue<T> implements QueueADT<T> {
     public String toString() {
         LinkedNode<T> current = this.front;
         String s = "LinkedQueue:\n";
-        while(current != null) {
+        while (current != null) {
             s += current.getElement().toString() + "\n";
             current = current.getNext();
         }

@@ -5,17 +5,20 @@
 package pt.ed2023.dataStructures.network;
 
 /**
+ * A classe HeapNode representa um nó em uma estrutura de heap.
  *
  * @author 8200335
  * @param <T>
  */
 public class HeapNode<T> extends BinaryTreeNode<T> {
+
     protected HeapNode<T> parent;
-    
+
     /**
      * Creates a new heap node with the specified data
+     *
      * @param obj the data to be contained within the new heap nodes
-     * 
+     *
      */
     public HeapNode(T obj) {
         super(obj);
@@ -28,5 +31,5 @@ public class HeapNode<T> extends BinaryTreeNode<T> {
 
     public void setParent(HeapNode<T> parent) {
         this.parent = parent;
-    }    
+    }
 }

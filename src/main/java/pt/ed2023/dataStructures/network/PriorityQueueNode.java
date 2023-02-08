@@ -5,6 +5,8 @@
 package pt.ed2023.dataStructures.network;
 
 /**
+ * * A classe PriorityQueueNode representa um nó em uma PriorityQueue (fila de
+ * prioridade). Cada nó tem um valor e uma prioridade associada.
  *
  * @author 8200335
  * @param <T>
@@ -47,12 +49,12 @@ public class PriorityQueueNode<T> implements Comparable<PriorityQueueNode> {
         return this.priority;
     }
 
-   /**
-    * Returns the order for this node.
-    *
-    * @return the integer order for this node
-    */
-   public int getOrder() {
+    /**
+     * Returns the order for this node.
+     *
+     * @return the integer order for this node
+     */
+    public int getOrder() {
         return this.order;
     }
 

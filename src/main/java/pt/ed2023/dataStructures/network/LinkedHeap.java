@@ -7,6 +7,9 @@ package pt.ed2023.dataStructures.network;
 import pt.ed2023.exceptions.EmptyCollectionException;
 
 /**
+ * A classe LinkedHeap representa uma implementação de uma árvore de heap
+ * baseada em lista encadeada. Uma árvore de heap é uma estrutura de dados onde
+ * cada nó tem um valor maior ou igual aos seus filhos.
  *
  * @author 8200335
  * @param <T>
